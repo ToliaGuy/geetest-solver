@@ -5,14 +5,14 @@ I did a little bit of a research and found out, that geetest slider will be the 
 Note: I was pretty much a newbie to a programming, so I didn't bother using a version control system, clear file structure nor comments.
 
 ## How does the solver work?
-There are a few steps, that need to be done before you can succesfully pass a captcha challenge.
+There are a few steps, that need to be done before you can successfully pass a captcha challenge.
 1. Reverse engineer the original challenge script, in order to get a broad understanding of how the test works.
 2. Construct two captcha images and compare them to find the distance, that we will use to drag the missing puzzle.
 3. Once I have the right distance, create a humanlike mouse movements in order to pass the test.
 4. Encode some browser fingerprints with mouse movements and send the payload to the endpoint. If you are successful you will get a valid cookie.
 
 ## Reverse engineering.
-Reverse engineering of the challenge was done with AST (abstract syntax tree) traversion using Babel. Traversions can be found in deobfuscate.js file. Learning about AST was very useful for me, I got much deeper understanding of Javascirpt syntax, that helped me in my future projects.
+Reverse engineering of the challenge was done with AST (abstract syntax tree) traversal using Babel. Traversals can be found in deobfuscate.js file. Learning about AST was very useful for me, I got much deeper understanding of Javascirpt syntax, that helped me in my future projects.
 
 ## Construction of images
 Construction of images was pretty easy, once I reverse engineered the challenge into somewhat readable form, I just reused their algorithm and than compared two images pixel by pixel to find out where they differ and to get their x and y coordinates (in which case x is pretty much the distance).
