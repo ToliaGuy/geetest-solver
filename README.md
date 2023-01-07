@@ -25,3 +25,6 @@ Once I reverse engineered the script, I just had to spoof needed browser values 
 
 ## Disclaimer
 Geetest company was notified and offered some tips to improve security of their test, plus I am not presenting you ready made solution, you need to do a lot of code digging in order to reproduce my results. (Made intentionally to prevent misuse)
+
+## How does the AST traversal work?
+To get a grasp of how AST traversal and reverse engineering of obfuscated code works checkout [trickster.dev blog post](https://www.trickster.dev/post/javascript-ast-manipulation-with-babel-the-first-steps/)
